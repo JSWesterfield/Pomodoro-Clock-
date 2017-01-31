@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <audio id="notification" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" preload="auto"></audio>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+  
+<body>
+<div id="top">
+  
+  <div id="left">
+    <p>SESSION LENGTH</p>
+      <div class="time">
+        <button id="minusL">-</button>
+        <span id="timeSession">25</span>
+        <button id="plusL">+</button>
+      </div>
+  </div>
+  
+  <div id="center">
+        <button id="start">START</button> 
+        <button id="reset">Reset</button>   
+  </div>
+  
+  <div id="right">
+      <p>BREAK LENGTH</p>
+      <div class="time">
+        <button id="minusR">-</button>
+        <span id="timeBreak">5</span>
+        <button id="plusR">+</button>
+      </div>
+  </div>
+  
+</div>
+
+<div id="bottom">
+  <span id="clock">25:00</span>  
+</div>
+  
+<footer>
+  Created by <a href="https://github.com/JSWesterfield">@JSWesterfield</a> 2017.</p>
+</footer>
+
+<script src="js/PomodoroClock.js"></script>
+
+</body>
+</html>
