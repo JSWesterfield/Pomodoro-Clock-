@@ -1,13 +1,15 @@
+//we set a the session and session initial/start time
 function Pomodoro(timeSession, timeBreak) {
     this.session = timeSession * 60;
     this.break = timeBreak * 60;
     this.state = "initial";
     this.lastState = "session";  
     this.timeLeft = timeSession * 60;
+    console.log("time session started");
 }
 
 Pomodoro.prototype.newState = function(state) {
-    this.lastState = this.state;
+    this.lastState = this.state;  
     this.state = state;
     if(state == "initial") this.lastState = "session";
     this.updateDisplay(this.timeLeft);
@@ -72,8 +74,8 @@ Pomodoro.prototype.updateTime = function(timeSession, timeBreak) {
 }
 
 var newPomodoro = new Pomodoro(25, 5),
-    sessionTime = document.getElementById("timeSession"),
-    breakTime = document.getElementById("timeBreak");
+    sessionTime = document.getElementById("#timeSession"), //we attach the sessionTime with our id 
+    breakTime = document.getElementById("#timeBreak");
 
 document.body.addEventListener("click", function(e) {
   
